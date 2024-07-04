@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rlangsir extends baseController
+class rlangsir extends BaseController
 {
 
     protected $sesi_user;

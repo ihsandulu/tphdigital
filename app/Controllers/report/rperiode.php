@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rperiode extends baseController
+class rperiode extends BaseController
 {
 
     protected $sesi_user;

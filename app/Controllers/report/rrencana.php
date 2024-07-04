@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rrencana extends baseController
+class rrencana extends BaseController
 {
 
     protected $sesi_user;

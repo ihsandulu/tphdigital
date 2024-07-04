@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mdivisi extends baseController
+class mdivisi extends BaseController
 {
 
     protected $sesi_user;

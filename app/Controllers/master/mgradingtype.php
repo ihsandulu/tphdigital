@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mgradingtype extends baseController
+class mgradingtype extends BaseController
 {
 
     protected $sesi_user;

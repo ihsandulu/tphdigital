@@ -5,7 +5,7 @@ namespace App\Controllers\transaction;
 
 use App\Controllers\baseController;
 
-class synchron extends baseController
+class synchron extends BaseController
 {
 
     protected $sesi_user;

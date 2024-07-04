@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rtunggakan extends baseController
+class rtunggakan extends BaseController
 {
 
     protected $sesi_user;

@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mquarrytype extends baseController
+class mquarrytype extends BaseController
 {
 
     protected $sesi_user;

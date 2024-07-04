@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mquarrynumber extends baseController
+class mquarrynumber extends BaseController
 {
 
     protected $sesi_user;

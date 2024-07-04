@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mmasaaktif extends baseController
+class mmasaaktif extends BaseController
 {
 
     protected $sesi_user;

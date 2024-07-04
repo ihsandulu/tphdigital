@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rabsend extends baseController
+class rabsend extends BaseController
 {
 
     protected $sesi_user;

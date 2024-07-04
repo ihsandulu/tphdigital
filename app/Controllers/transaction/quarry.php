@@ -5,7 +5,7 @@ namespace App\Controllers\transaction;
 
 use App\Controllers\baseController;
 
-class quarry extends baseController
+class quarry extends BaseController
 {
 
     protected $sesi_user;

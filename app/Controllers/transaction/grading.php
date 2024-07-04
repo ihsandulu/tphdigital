@@ -5,7 +5,7 @@ namespace App\Controllers\transaction;
 
 use App\Controllers\baseController;
 
-class grading extends baseController
+class grading extends BaseController
 {
 
     protected $sesi_user;

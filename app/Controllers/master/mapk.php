@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mapk extends baseController
+class mapk extends BaseController
 {
 
     protected $sesi_user;

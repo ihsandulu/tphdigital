@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rrekap extends baseController
+class rrekap extends BaseController
 {
 
     protected $sesi_user;

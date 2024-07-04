@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rpanen extends baseController
+class rpanen extends BaseController
 {
 
     protected $sesi_user;

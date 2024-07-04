@@ -5,7 +5,7 @@ namespace App\Controllers\transaction;
 
 use App\Controllers\baseController;
 
-class rkh extends baseController
+class rkh extends BaseController
 {
 
     protected $sesi_user;

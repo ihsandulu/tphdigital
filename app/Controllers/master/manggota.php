@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class manggota extends baseController
+class manggota extends BaseController
 {
 
     protected $sesi_user;

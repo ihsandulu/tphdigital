@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mlr extends baseController
+class mlr extends BaseController
 {
 
     protected $sesi_user;

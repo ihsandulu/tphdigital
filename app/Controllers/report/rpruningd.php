@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rpruningd extends baseController
+class rpruningd extends BaseController
 {
 
     protected $sesi_user;

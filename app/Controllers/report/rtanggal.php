@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rtanggal extends baseController
+class rtanggal extends BaseController
 {
 
     protected $sesi_user;

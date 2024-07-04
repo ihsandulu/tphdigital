@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rgrading extends baseController
+class rgrading extends BaseController
 {
 
     protected $sesi_user;

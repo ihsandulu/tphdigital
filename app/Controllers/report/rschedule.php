@@ -5,7 +5,7 @@ namespace App\Controllers\report;
 
 use App\Controllers\baseController;
 
-class rschedule extends baseController
+class rschedule extends BaseController
 {
 
     protected $sesi_user;

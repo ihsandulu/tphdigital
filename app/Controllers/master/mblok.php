@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class mblok extends baseController
+class mblok extends BaseController
 {
 
     protected $sesi_user;

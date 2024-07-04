@@ -5,7 +5,7 @@ namespace App\Controllers\master;
 
 use App\Controllers\baseController;
 
-class muserposition extends baseController
+class muserposition extends BaseController
 {
 
     protected $sesi_userposition;

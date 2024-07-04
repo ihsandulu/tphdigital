@@ -5,7 +5,7 @@ namespace App\Controllers;
 use phpDocumentor\Reflection\Types\Null_;
 use CodeIgniter\API\ResponseTrait;
 
-class api extends baseController
+class api extends BaseController
 {
     use ResponseTrait;
 
