@@ -3,9 +3,9 @@
 namespace App\Controllers\master;
 
 
-use App\Controllers\baseController;
+use App\Controllers\BaseController;
 
-class Midentity extends BaseController
+class midentity extends BaseController
 {
     protected $sesi_user;
     public function __construct()
