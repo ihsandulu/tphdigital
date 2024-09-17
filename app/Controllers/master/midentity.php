@@ -7,7 +7,6 @@ use App\Controllers\baseController;
 
 class Midentity extends BaseController
 {
-
     protected $sesi_user;
     public function __construct()
     {
