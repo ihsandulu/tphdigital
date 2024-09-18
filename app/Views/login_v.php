@@ -17,7 +17,7 @@ foreach($identity->getResult() as $identity){
 <html lang="en">
 
 <head>
-    <title>Login PAM</title>
+    <title>LOGIN TPH DIGITAL</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
