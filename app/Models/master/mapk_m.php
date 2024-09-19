@@ -80,25 +80,17 @@ class mapk_m extends core_m
                 // File Tipe Tidak Sesuai
                 $data['uploadapk_file'] = "Format File Salah !";
             }
-        } 
+        }
 
-        
+
 
         //delete
-        if ($this->request->getPost("delete") == "OK") { 
-            $apk_id=   $this->request->getPost("apk_id");
-            $cek=$this->db->table("divisi")
-            ->where("apk_id", $apk_id) 
-            ->get()
-            ->getNumRows();
-            if($cek>0){
-                $data["message"] = "apk masih dipakai di data Divisi!";
-            } else{    
-                $this->db
+        if ($this->request->getPost("delete") == "OK") {
+            $apk_id =   $this->request->getPost("apk_id");
+            $this->db
                 ->table("apk")
                 ->delete(array("apk_id" =>  $apk_id));
-                $data["message"] = "Delete Success";
-            }
+            $data["message"] = "Delete Success";
         }
 
         //insert
@@ -118,7 +110,7 @@ class mapk_m extends core_m
             $data["message"] = "Insert Data Success";
         }
         //echo $_POST["create"];die;
-        
+
         //update
         if ($this->request->getPost("change") == "OK") {
             foreach ($this->request->getPost() as $e => $f) {
