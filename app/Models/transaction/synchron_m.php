@@ -20,7 +20,7 @@ class synchron_m extends core_m
             ->table("sptbs")
             ->join("t_user","t_user.user_id=sptbs.sptbs_createdby","left")
             ->join("t_vendor","t_vendor.ID_vendor=sptbs.sptbs_vendor","left")
-            ->join("t_material","t_material.ID_material=sptbs.sptbs_material","left")
+            ->join("material","material.material_id=sptbs.sptbs_material","left")
             ->join("t_asal","t_asal.id_asal=sptbs.sptbs_kecamatan","left")
             ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
             ->join("t_driver","t_driver.ID_driver=sptbs.sptbs_driver","left")
@@ -47,7 +47,7 @@ class synchron_m extends core_m
                         $data[$field] = $sptbs->$field;
                     }
                 }
-                foreach ($this->db->getFieldNames('t_material') as $field) {
+                foreach ($this->db->getFieldNames('material') as $field) {
                     if (!in_array($field, $larang)) {
                         $data[$field] = $sptbs->$field;
                     }
@@ -88,7 +88,7 @@ class synchron_m extends core_m
             foreach ($this->db->getFieldNames('t_vendor') as $field) {
                 $data[$field] = "";
             }
-            foreach ($this->db->getFieldNames('t_material') as $field) {
+            foreach ($this->db->getFieldNames('material') as $field) {
                 $data[$field] = "";
             }
             foreach ($this->db->getFieldNames('t_asal') as $field) {
