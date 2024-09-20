@@ -520,7 +520,7 @@
                                     ->join("material","material.material_id=sptbs.sptbs_material","left")
                                     ->join("t_asal","t_asal.id_asal=sptbs.sptbs_kecamatan","left")
                                     // ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
-                                    ->join("t_driver","t_driver.ID_driver=sptbs.sptbs_driver","left")
+                                    ->join("(SELECT t_user.user_id AS driver_id, t_user.username as driver_name FROM t_user WHERE position_id='7')AS driver","driver.driver_id=sptbs.sptbs_driver","left")
                                     ->join("estate","estate.estate_id=sptbs.estate_id","left")
                                     ->join("divisi","divisi.divisi_id=sptbs.divisi_id","left")
                                     ->where("sptbs_date >=",$dari)
@@ -606,7 +606,7 @@
                                         <td><?= $usr->material_name; ?></td>
                                         <td><?= $usr->kecamatan; ?></td>
                                         <td><?= $usr->no_polisi; ?></td>
-                                        <td><?= $usr->nama_driver; ?></td> -->
+                                        <td><?= $usr->driver_name; ?></td> -->
                                     </tr>
                                 <?php } ?>
                             </tbody>

@@ -23,7 +23,8 @@ class synchron_m extends core_m
             ->join("material","material.material_id=sptbs.sptbs_material","left")
             ->join("t_asal","t_asal.id_asal=sptbs.sptbs_kecamatan","left")
             // ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
-            ->join("t_driver","t_driver.ID_driver=sptbs.sptbs_driver","left")
+            ->join("(SELECT t_user.user_id AS driver_id, t_user.username as driver_name FROM t_user WHERE position_id='7')AS driver","driver.driver_id=sptbs.sptbs_driver","left")
+            // ->join("t_driver","t_driver.ID_driver=sptbs.sptbs_driver","left")
             ->join("estate","estate.estate_id=sptbs.estate_id","left")
             ->join("divisi","divisi.divisi_id=sptbs.divisi_id","left")
             ->getWhere($sptbsd);
@@ -62,11 +63,11 @@ class synchron_m extends core_m
                         $data[$field] = $sptbs->$field;
                     }
                 } */
-                foreach ($this->db->getFieldNames('t_driver') as $field) {
+                /* foreach ($this->db->getFieldNames('t_driver') as $field) {
                     if (!in_array($field, $larang)) {
                         $data[$field] = $sptbs->$field;
                     }
-                }
+                } */
                 foreach ($this->db->getFieldNames('estate') as $field) {
                     if (!in_array($field, $larang)) {
                         $data[$field] = $sptbs->$field;
@@ -97,9 +98,9 @@ class synchron_m extends core_m
             /* foreach ($this->db->getFieldNames('t_trukpenerimaan') as $field) {
                 $data[$field] = "";
             } */
-            foreach ($this->db->getFieldNames('t_driver') as $field) {
+            /* foreach ($this->db->getFieldNames('t_driver') as $field) {
                 $data[$field] = "";
-            }
+            } */
             foreach ($this->db->getFieldNames('estate') as $field) {
                 $data[$field] = "";
             }
