@@ -27,8 +27,8 @@ class synchron_m extends core_m
             ->join("estate","estate.estate_id=sptbs.estate_id","left")
             ->join("divisi","divisi.divisi_id=sptbs.divisi_id","left")
             ->getWhere($sptbsd);
-        /* echo $this->db->getLastquery();
-        die; */
+        echo $this->db->getLastquery();
+        die;
         $larang = array("log_id", "id", "user_id", "action", "data", "sptbs_id_dep", "trx_id", "trx_code");
         if ($us->getNumRows() > 0) {
             foreach ($us->getResult() as $sptbs) {
