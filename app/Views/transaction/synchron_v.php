@@ -519,7 +519,7 @@
                                     ->join("t_vendor","t_vendor.ID_vendor=sptbs.sptbs_vendor","left")
                                     ->join("material","material.material_id=sptbs.sptbs_material","left")
                                     ->join("t_asal","t_asal.id_asal=sptbs.sptbs_kecamatan","left")
-                                    ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
+                                    // ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
                                     ->join("t_driver","t_driver.ID_driver=sptbs.sptbs_driver","left")
                                     ->join("estate","estate.estate_id=sptbs.estate_id","left")
                                     ->join("divisi","divisi.divisi_id=sptbs.divisi_id","left")

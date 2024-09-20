@@ -22,13 +22,13 @@ class synchron_m extends core_m
             ->join("t_vendor","t_vendor.ID_vendor=sptbs.sptbs_vendor","left")
             ->join("material","material.material_id=sptbs.sptbs_material","left")
             ->join("t_asal","t_asal.id_asal=sptbs.sptbs_kecamatan","left")
-            ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
+            // ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
             ->join("t_driver","t_driver.ID_driver=sptbs.sptbs_driver","left")
             ->join("estate","estate.estate_id=sptbs.estate_id","left")
             ->join("divisi","divisi.divisi_id=sptbs.divisi_id","left")
             ->getWhere($sptbsd);
-        echo $this->db->getLastquery();
-        die;
+        /* echo $this->db->getLastquery();
+        die; */
         $larang = array("log_id", "id", "user_id", "action", "data", "sptbs_id_dep", "trx_id", "trx_code");
         if ($us->getNumRows() > 0) {
             foreach ($us->getResult() as $sptbs) {
@@ -57,11 +57,11 @@ class synchron_m extends core_m
                         $data[$field] = $sptbs->$field;
                     }
                 }
-                foreach ($this->db->getFieldNames('t_trukpenerimaan') as $field) {
+               /*  foreach ($this->db->getFieldNames('t_trukpenerimaan') as $field) {
                     if (!in_array($field, $larang)) {
                         $data[$field] = $sptbs->$field;
                     }
-                }
+                } */
                 foreach ($this->db->getFieldNames('t_driver') as $field) {
                     if (!in_array($field, $larang)) {
                         $data[$field] = $sptbs->$field;
@@ -94,9 +94,9 @@ class synchron_m extends core_m
             foreach ($this->db->getFieldNames('t_asal') as $field) {
                 $data[$field] = "";
             }
-            foreach ($this->db->getFieldNames('t_trukpenerimaan') as $field) {
+            /* foreach ($this->db->getFieldNames('t_trukpenerimaan') as $field) {
                 $data[$field] = "";
-            }
+            } */
             foreach ($this->db->getFieldNames('t_driver') as $field) {
                 $data[$field] = "";
             }
