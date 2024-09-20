@@ -517,7 +517,7 @@
                                     ->table("sptbs")
                                     ->join("t_user","t_user.user_id=sptbs.sptbs_createdby","left")
                                     ->join("t_vendor","t_vendor.ID_vendor=sptbs.sptbs_vendor","left")
-                                    ->join("t_material","t_material.ID_material=sptbs.sptbs_material","left")
+                                    ->join("material","material.material_id=sptbs.sptbs_material","left")
                                     ->join("t_asal","t_asal.id_asal=sptbs.sptbs_kecamatan","left")
                                     ->join("t_trukpenerimaan","t_trukpenerimaan.no_polisi=sptbs.sptbs_plat","left")
                                     ->join("t_driver","t_driver.ID_driver=sptbs.sptbs_driver","left")
@@ -599,11 +599,11 @@
                                         </td>
                                         <td>
                                             <?= $usr->nama_vendor; ?><br/>
-                                            <?= $usr->nama_material; ?><br/>
+                                            <?= $usr->material_name; ?><br/>
                                             <?= $usr->kecamatan; ?><br/>
                                         </td>
                                         <!-- <td><?= $usr->nama_vendor; ?></td>
-                                        <td><?= $usr->nama_material; ?></td>
+                                        <td><?= $usr->material_name; ?></td>
                                         <td><?= $usr->kecamatan; ?></td>
                                         <td><?= $usr->no_polisi; ?></td>
                                         <td><?= $usr->nama_driver; ?></td> -->
