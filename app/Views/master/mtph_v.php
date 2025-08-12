@@ -213,6 +213,7 @@
                                         <th>Sertifikat</th>
                                         <th>Status</th>
                                         <th>BJR</th>
+                                        <th>GEO</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -284,6 +285,7 @@
                                             <td><?= $usr->tph_certificate; ?></td>
                                             <td><?= $usr->tph_status; ?></td>
                                             <td><?= $usr->tph_bjr; ?></td>
+                                            <td><?= $usr->tph_geo; ?></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
